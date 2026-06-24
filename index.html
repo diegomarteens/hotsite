@@ -10,18 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; background: #FFFFFF; color: #000000; -webkit-font-smoothing: antialiased; }
+  html, body { margin: 0; padding: 0; background: #F7F6F2; color: #1A1814; -webkit-font-smoothing: antialiased; }
   body { font-family: Geist, Inter, sans-serif; }
-  a:focus-visible, summary:focus-visible { outline: 2px solid #000000; outline-offset: 3px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid #1C3A5E; outline-offset: 3px; }
   details > summary { list-style: none; cursor: pointer; }
   details > summary::-webkit-details-marker { display: none; }
 
-  /* Botão WhatsApp — fundo preto */
-  .btn-dark { background:#000000; color:#FFFFFF; border:1px solid #000000; transition:background .15s ease, color .15s ease; }
-  .btn-dark:hover { background:#FFFFFF; color:#000000; }
-  /* Botão WhatsApp — fundo branco (card destacado / CTA final) */
-  .btn-light { background:#FFFFFF; color:#000000; border:1px solid #FFFFFF; transition:background .15s ease, color .15s ease; }
-  .btn-light:hover { background:#000000; color:#FFFFFF; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; font-family:Geist,sans-serif; font-weight:500; text-decoration:none; transition:background .15s ease, color .15s ease, border-color .15s ease; }
+  .btn-dark { background:#1A1814; color:#F7F6F2; border:1px solid #1A1814; }
+  .btn-dark:hover { background:#F7F6F2; color:#1A1814; }
+  .btn-light { background:#F7F6F2; color:#1A1814; border:1px solid #F7F6F2; }
+  .btn-light:hover { background:#1C3A5E; color:#FFFFFF; border-color:#1C3A5E; }
 
   .wa-fixed { display: none; }
   @media (max-width: 640px) {
@@ -29,136 +28,135 @@
     .has-fixed-cta { padding-bottom: 64px; }
   }
 
-  /* Entrada com fade-up, só com motion permitido. Conteúdo nunca depende disso. */
   @media (prefers-reduced-motion: no-preference) {
     @keyframes revealUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-    [data-reveal] { animation: revealUp .6s ease both; animation-timeline: view(); animation-range: entry 0% cover 22%; }
+    [data-reveal] { animation: revealUp .6s ease both; animation-timeline: view(); animation-range: entry 0% cover 20%; }
   }
 </style>
 </head>
 <body>
-<main class="has-fixed-cta" style="background:#FFFFFF;">
+<main class="has-fixed-cta" style="background:#F7F6F2;">
 
   <!-- HERO -->
-  <section data-reveal style="background:#FFFFFF; padding: clamp(72px,11vw,128px) 24px clamp(56px,9vw,96px);">
+  <section data-reveal style="background:#F7F6F2; padding: clamp(72px,11vw,128px) 24px clamp(56px,9vw,96px);">
     <div style="max-width:1080px; margin:0 auto;">
-      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#555555; border-top:1px solid #555555; padding-top:14px; margin:0 0 40px; display:inline-block;">DIAGNÓSTICO COMERCIAL</p>
-      <h1 style="font-family:Geist,sans-serif; font-weight:700; font-size:clamp(2.5rem,5vw,4rem); line-height:1.1; letter-spacing:-0.02em; color:#000000; max-width:18ch; margin:0 0 28px;">Sua marca compra tráfego todo mês. E perde o cliente na primeira recompra.</h1>
-      <p style="font-size:clamp(1.0625rem,1.6vw,1.25rem); line-height:1.6; color:#000000; max-width:640px; margin:0 0 44px;">Raio-X de retenção e LTV para marcas de beleza e moda que querem crescer sem depender só de mídia paga.</p>
+      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#1C3A5E; border-top:1px solid #1C3A5E; padding-top:14px; margin:0 0 40px; display:inline-block;">DIAGNÓSTICO COMERCIAL</p>
+      <h1 style="font-family:Geist,sans-serif; font-weight:700; font-size:clamp(2.5rem,5vw,4rem); line-height:1.1; letter-spacing:-0.02em; color:#1A1814; max-width:18ch; margin:0 0 28px;">Sua marca compra tráfego todo mês. E perde o cliente na primeira recompra.</h1>
+      <p style="font-size:clamp(1.0625rem,1.6vw,1.25rem); line-height:1.6; color:#1A1814; max-width:640px; margin:0 0 44px;">Raio-X de retenção e LTV para marcas de beleza e moda que querem crescer sem depender só de mídia paga.</p>
       <div style="display:flex; flex-direction:column; align-items:flex-start; gap:14px;">
-        <a class="btn-dark" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; font-family:Geist,sans-serif; font-weight:500; font-size:1rem; padding:17px 30px; text-decoration:none;">Falar no WhatsApp</a>
-        <p style="font-size:0.875rem; color:#808080; margin:0;">Resposta direta comigo, sem formulário e sem robô.</p>
+        <a class="btn btn-dark" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="font-size:1rem; padding:17px 30px;">Falar no WhatsApp</a>
+        <p style="font-size:0.875rem; color:#84817A; margin:0;">Resposta direta comigo, sem formulário e sem robô.</p>
       </div>
     </div>
   </section>
 
   <!-- O CENÁRIO -->
-  <section data-reveal style="background:#F2F2F2; padding: clamp(56px,9vw,96px) 24px;">
+  <section data-reveal style="background:#ECEAE3; padding: clamp(56px,9vw,96px) 24px;">
     <div style="max-width:1080px; margin:0 auto;">
-      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#555555; border-top:1px solid #555555; padding-top:14px; margin:0 0 36px; display:inline-block;">O CENÁRIO</p>
-      <p style="font-size:clamp(1.25rem,2.2vw,1.625rem); line-height:1.5; letter-spacing:-0.01em; color:#000000; max-width:680px; margin:0 0 24px; text-wrap:pretty;">Marca de beleza ou moda cresce comprando mídia. O CAC sobe a cada campanha. O cliente compra uma vez e some. A margem sangra em silêncio enquanto o time corre atrás do próximo pedido.</p>
-      <p style="font-size:1.125rem; line-height:1.6; color:#555555; max-width:680px; margin:0; text-wrap:pretty;">O problema raramente está no tráfego. Está no que acontece depois da primeira compra.</p>
+      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#1C3A5E; border-top:1px solid #1C3A5E; padding-top:14px; margin:0 0 36px; display:inline-block;">O CENÁRIO</p>
+      <p style="font-size:clamp(1.25rem,2.2vw,1.625rem); line-height:1.5; letter-spacing:-0.01em; color:#1A1814; max-width:680px; margin:0 0 24px; text-wrap:pretty;">Marca de beleza ou moda cresce comprando mídia. O CAC sobe a cada campanha. O cliente compra uma vez e some. A margem sangra em silêncio enquanto o time corre atrás do próximo pedido.</p>
+      <p style="font-size:1.125rem; line-height:1.6; color:#6B675E; max-width:680px; margin:0; text-wrap:pretty;">O problema raramente está no tráfego. Está no que acontece depois da primeira compra.</p>
     </div>
   </section>
 
   <!-- O QUE O DIAGNÓSTICO ENTREGA -->
-  <section data-reveal style="background:#FFFFFF; padding: clamp(56px,9vw,96px) 24px;">
+  <section data-reveal style="background:#F7F6F2; padding: clamp(56px,9vw,96px) 24px;">
     <div style="max-width:1080px; margin:0 auto;">
-      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#555555; border-top:1px solid #555555; padding-top:14px; margin:0 0 36px; display:inline-block;">O QUE O DIAGNÓSTICO ENTREGA</p>
-      <p style="font-size:1.125rem; line-height:1.65; color:#000000; max-width:680px; margin:0 0 64px; text-wrap:pretty;">Eu leio os dados reais da sua operação e mostro, com número, onde a receita vaza: onde o funil quebra entre visita, carrinho e pagamento, quanto você gasta para reativar quem já comprou, qual a sua relação LTV:CAC hoje e se ela se sustenta. Tudo comparado com benchmark de mercado, não com opinião.</p>
+      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#1C3A5E; border-top:1px solid #1C3A5E; padding-top:14px; margin:0 0 36px; display:inline-block;">O QUE O DIAGNÓSTICO ENTREGA</p>
+      <p style="font-size:1.125rem; line-height:1.65; color:#1A1814; max-width:680px; margin:0 0 64px; text-wrap:pretty;">Eu leio os dados reais da sua operação e mostro, com número, onde a receita vaza: onde o funil quebra entre visita, carrinho e pagamento, quanto você gasta para reativar quem já comprou, qual a sua relação LTV:CAC hoje e se ela se sustenta. Tudo comparado com benchmark de mercado, não com opinião.</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:48px;">
-        <div style="border-top:1px solid #555555; padding-top:20px;">
-          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:clamp(1.75rem,3vw,2.25rem); color:#000000; margin:0 0 14px; letter-spacing:-0.01em;">3:1</p>
-          <p style="font-size:1rem; line-height:1.6; color:#808080; margin:0; max-width:420px;">Relação LTV:CAC mínima saudável. Abaixo disso, a operação cresce no vermelho.</p>
+        <div style="border-top:1px solid #1C3A5E; padding-top:20px;">
+          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:clamp(1.75rem,3vw,2.25rem); color:#1C3A5E; margin:0 0 14px; letter-spacing:-0.01em;">3:1</p>
+          <p style="font-size:1rem; line-height:1.6; color:#84817A; margin:0; max-width:420px;">Relação LTV:CAC mínima saudável. Abaixo disso, a operação cresce no vermelho.</p>
         </div>
-        <div style="border-top:1px solid #555555; padding-top:20px;">
-          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:clamp(1.75rem,3vw,2.25rem); color:#000000; margin:0 0 14px; letter-spacing:-0.01em;">70 a 80%</p>
-          <p style="font-size:1rem; line-height:1.6; color:#808080; margin:0; max-width:420px;">Abandono de carrinho é o padrão de mercado. Acima disso, há fricção custando dinheiro.</p>
+        <div style="border-top:1px solid #1C3A5E; padding-top:20px;">
+          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:clamp(1.75rem,3vw,2.25rem); color:#1C3A5E; margin:0 0 14px; letter-spacing:-0.01em;">70 a 80%</p>
+          <p style="font-size:1rem; line-height:1.6; color:#84817A; margin:0; max-width:420px;">Abandono de carrinho é o padrão de mercado. Acima disso, há fricção custando dinheiro.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- COMO FUNCIONA -->
-  <section data-reveal style="background:#F2F2F2; padding: clamp(56px,9vw,96px) 24px;">
+  <section data-reveal style="background:#ECEAE3; padding: clamp(56px,9vw,96px) 24px;">
     <div style="max-width:1080px; margin:0 auto;">
-      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#555555; border-top:1px solid #555555; padding-top:14px; margin:0 0 40px; display:inline-block;">COMO FUNCIONA</p>
+      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#1C3A5E; border-top:1px solid #1C3A5E; padding-top:14px; margin:0 0 40px; display:inline-block;">COMO FUNCIONA</p>
       <ol style="list-style:none; margin:0; padding:0; max-width:760px;">
-        <li style="display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid #CCCCCC;">
-          <span style="flex:none; width:44px; height:44px; background:#000000; color:#FFFFFF; font-family:'Geist Mono',monospace; font-weight:600; font-size:1rem; display:flex; align-items:center; justify-content:center;">01</span>
-          <p style="font-size:1.125rem; line-height:1.5; color:#000000; margin:0; padding-top:9px;">Você libera acesso aos dados: plataforma, analytics e mídia.</p>
+        <li style="display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid #D8D6CE;">
+          <span style="flex:none; width:44px; height:44px; background:#1C3A5E; color:#F7F6F2; font-family:'Geist Mono',monospace; font-weight:600; font-size:1rem; display:flex; align-items:center; justify-content:center;">01</span>
+          <p style="font-size:1.125rem; line-height:1.5; color:#1A1814; margin:0; padding-top:9px;">Você libera acesso aos dados: plataforma, analytics e mídia.</p>
         </li>
-        <li style="display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid #CCCCCC;">
-          <span style="flex:none; width:44px; height:44px; background:#000000; color:#FFFFFF; font-family:'Geist Mono',monospace; font-weight:600; font-size:1rem; display:flex; align-items:center; justify-content:center;">02</span>
-          <p style="font-size:1.125rem; line-height:1.5; color:#000000; margin:0; padding-top:9px;">Em <span style="font-family:'Geist Mono',monospace; font-weight:500;">7 a 10 dias</span>, eu cruzo os seus números com o benchmark do setor.</p>
+        <li style="display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid #D8D6CE;">
+          <span style="flex:none; width:44px; height:44px; background:#1C3A5E; color:#F7F6F2; font-family:'Geist Mono',monospace; font-weight:600; font-size:1rem; display:flex; align-items:center; justify-content:center;">02</span>
+          <p style="font-size:1.125rem; line-height:1.5; color:#1A1814; margin:0; padding-top:9px;">Em <span style="font-family:'Geist Mono',monospace; font-weight:500;">7 a 10 dias</span>, eu cruzo os seus números com o benchmark do setor.</p>
         </li>
-        <li style="display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid #CCCCCC;">
-          <span style="flex:none; width:44px; height:44px; background:#000000; color:#FFFFFF; font-family:'Geist Mono',monospace; font-weight:600; font-size:1rem; display:flex; align-items:center; justify-content:center;">03</span>
-          <p style="font-size:1.125rem; line-height:1.5; color:#000000; margin:0; padding-top:9px;">Você recebe um relatório com o diagnóstico e um plano de ação de <span style="font-family:'Geist Mono',monospace; font-weight:500;">90 dias</span>.</p>
+        <li style="display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid #D8D6CE;">
+          <span style="flex:none; width:44px; height:44px; background:#1C3A5E; color:#F7F6F2; font-family:'Geist Mono',monospace; font-weight:600; font-size:1rem; display:flex; align-items:center; justify-content:center;">03</span>
+          <p style="font-size:1.125rem; line-height:1.5; color:#1A1814; margin:0; padding-top:9px;">Você recebe um relatório com o diagnóstico e um plano de ação de <span style="font-family:'Geist Mono',monospace; font-weight:500;">90 dias</span>.</p>
         </li>
-        <li style="display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;">
-          <span style="flex:none; width:44px; height:44px; background:#000000; color:#FFFFFF; font-family:'Geist Mono',monospace; font-weight:600; font-size:1rem; display:flex; align-items:center; justify-content:center;">04</span>
-          <p style="font-size:1.125rem; line-height:1.5; color:#000000; margin:0; padding-top:9px;">Fechamos com uma call de leitura, onde eu explico cada ponto e a ordem de prioridade.</p>
+        <li style="display:flex; gap:24px; align-items:flex-start; padding:28px 0; border-top:1px solid #D8D6CE; border-bottom:1px solid #D8D6CE;">
+          <span style="flex:none; width:44px; height:44px; background:#1C3A5E; color:#F7F6F2; font-family:'Geist Mono',monospace; font-weight:600; font-size:1rem; display:flex; align-items:center; justify-content:center;">04</span>
+          <p style="font-size:1.125rem; line-height:1.5; color:#1A1814; margin:0; padding-top:9px;">Fechamos com uma call de leitura, onde eu explico cada ponto e a ordem de prioridade.</p>
         </li>
       </ol>
     </div>
   </section>
 
   <!-- PARA QUEM É -->
-  <section data-reveal style="background:#FFFFFF; padding: clamp(56px,9vw,96px) 24px;">
+  <section data-reveal style="background:#F7F6F2; padding: clamp(56px,9vw,96px) 24px;">
     <div style="max-width:1080px; margin:0 auto;">
-      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#555555; border-top:1px solid #555555; padding-top:14px; margin:0 0 36px; display:inline-block;">PARA QUEM É</p>
-      <p style="font-size:clamp(1.25rem,2.2vw,1.625rem); line-height:1.5; letter-spacing:-0.01em; color:#000000; max-width:680px; margin:0; text-wrap:pretty;">Marcas de beleza e moda, feminina, masculina e acessórios, que vendem direto ao consumidor e sentem que crescem comprando cliente novo em vez de manter quem já têm.</p>
+      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#1C3A5E; border-top:1px solid #1C3A5E; padding-top:14px; margin:0 0 36px; display:inline-block;">PARA QUEM É</p>
+      <p style="font-size:clamp(1.25rem,2.2vw,1.625rem); line-height:1.5; letter-spacing:-0.01em; color:#1A1814; max-width:680px; margin:0; text-wrap:pretty;">Marcas de beleza e moda, feminina, masculina e acessórios, que vendem direto ao consumidor e sentem que crescem comprando cliente novo em vez de manter quem já têm.</p>
     </div>
   </section>
 
   <!-- ESCOLHA O FORMATO -->
-  <section data-reveal style="background:#F2F2F2; padding: clamp(56px,9vw,96px) 24px;">
+  <section data-reveal style="background:#ECEAE3; padding: clamp(56px,9vw,96px) 24px;">
     <div style="max-width:1080px; margin:0 auto;">
-      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#555555; border-top:1px solid #555555; padding-top:14px; margin:0 0 40px; display:inline-block;">ESCOLHA O FORMATO</p>
+      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#1C3A5E; border-top:1px solid #1C3A5E; padding-top:14px; margin:0 0 40px; display:inline-block;">ESCOLHA O FORMATO</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; align-items:stretch;">
 
         <!-- Plano 1 -->
-        <div style="border:1px solid #CCCCCC; background:#FFFFFF; padding:32px; display:flex; flex-direction:column;">
-          <h3 style="font-size:1.25rem; font-weight:600; color:#000000; margin:0 0 8px;">Diagnóstico</h3>
-          <p style="font-size:1rem; line-height:1.5; color:#808080; margin:0 0 24px;">Para enxergar onde a receita vaza.</p>
-          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:1.25rem; color:#000000; margin:0 0 28px;">R$ 3.500 <span style="color:#808080; font-weight:500;">· entrega única</span></p>
+        <div style="border:1px solid #D8D6CE; background:#F7F6F2; padding:32px; display:flex; flex-direction:column;">
+          <h3 style="font-size:1.25rem; font-weight:600; color:#1A1814; margin:0 0 8px;">Diagnóstico</h3>
+          <p style="font-size:1rem; line-height:1.5; color:#84817A; margin:0 0 24px;">Para enxergar onde a receita vaza.</p>
+          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:1.25rem; color:#1A1814; margin:0 0 28px;">R$ 3.500 <span style="color:#84817A; font-weight:500;">· entrega única</span></p>
           <div style="display:flex; flex-direction:column; margin:0 0 28px;">
-            <span style="font-size:0.9375rem; line-height:1.5; color:#000000; padding:12px 0; border-top:1px solid #CCCCCC;">Leitura completa dos seus dados</span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#000000; padding:12px 0; border-top:1px solid #CCCCCC;">Relatório de diagnóstico</span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#000000; padding:12px 0; border-top:1px solid #CCCCCC;">Plano de ação de <span style="font-family:'Geist Mono',monospace; font-weight:500;">90 dias</span></span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#000000; padding:12px 0; border-top:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;">Call de leitura de <span style="font-family:'Geist Mono',monospace; font-weight:500;">60 minutos</span></span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#1A1814; padding:12px 0; border-top:1px solid #D8D6CE;">Leitura completa dos seus dados</span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#1A1814; padding:12px 0; border-top:1px solid #D8D6CE;">Relatório de diagnóstico</span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#1A1814; padding:12px 0; border-top:1px solid #D8D6CE;">Plano de ação de <span style="font-family:'Geist Mono',monospace; font-weight:500;">90 dias</span></span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#1A1814; padding:12px 0; border-top:1px solid #D8D6CE; border-bottom:1px solid #D8D6CE;">Call de leitura de <span style="font-family:'Geist Mono',monospace; font-weight:500;">60 minutos</span></span>
           </div>
-          <a class="btn-dark" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="margin-top:auto; display:inline-flex; align-items:center; justify-content:center; font-family:Geist,sans-serif; font-weight:500; font-size:0.9375rem; padding:14px 20px; text-decoration:none;">Falar no WhatsApp</a>
+          <a class="btn btn-dark" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="margin-top:auto; font-size:0.9375rem; padding:14px 20px;">Falar no WhatsApp</a>
         </div>
 
         <!-- Plano 2 destacado -->
-        <div style="border:1px solid #000000; background:#000000; color:#FFFFFF; padding:32px; display:flex; flex-direction:column;">
-          <span style="font-family:'Geist Mono',monospace; font-size:0.6875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.12em; color:#FFFFFF; border:1px solid rgba(255,255,255,0.4); padding:5px 10px; align-self:flex-start; margin:0 0 20px;">Mais escolhido</span>
-          <h3 style="font-size:1.25rem; font-weight:600; color:#FFFFFF; margin:0 0 8px;">Diagnóstico + Execução</h3>
-          <p style="font-size:1rem; line-height:1.5; color:#B0B0B0; margin:0 0 24px;">Para corrigir, não só descobrir.</p>
-          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:1.25rem; color:#FFFFFF; margin:0 0 28px;">R$ 6.500 <span style="color:#B0B0B0; font-weight:500;">· entrega + 30 dias de acompanhamento</span></p>
+        <div style="border:1px solid #1A1814; background:#1A1814; color:#F7F6F2; padding:32px; display:flex; flex-direction:column;">
+          <span style="font-family:'Geist Mono',monospace; font-size:0.6875rem; font-weight:600; text-transform:uppercase; letter-spacing:0.12em; background:#1C3A5E; color:#FFFFFF; padding:6px 11px; align-self:flex-start; margin:0 0 20px;">Mais escolhido</span>
+          <h3 style="font-size:1.25rem; font-weight:600; color:#F7F6F2; margin:0 0 8px;">Diagnóstico + Execução</h3>
+          <p style="font-size:1rem; line-height:1.5; color:#A8A49B; margin:0 0 24px;">Para corrigir, não só descobrir.</p>
+          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:1.25rem; color:#F7F6F2; margin:0 0 28px;">R$ 6.500 <span style="color:#A8A49B; font-weight:500;">· entrega + 30 dias de acompanhamento</span></p>
           <div style="display:flex; flex-direction:column; margin:0 0 28px;">
-            <span style="font-size:0.9375rem; line-height:1.5; color:#FFFFFF; padding:12px 0; border-top:1px solid rgba(255,255,255,0.18);">Tudo do plano Diagnóstico</span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#FFFFFF; padding:12px 0; border-top:1px solid rgba(255,255,255,0.18);">Benchmark com <span style="font-family:'Geist Mono',monospace; font-weight:500;">3 concorrentes</span> diretos</span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#FFFFFF; padding:12px 0; border-top:1px solid rgba(255,255,255,0.18);">Priorização com estimativa de impacto em receita</span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#FFFFFF; padding:12px 0; border-top:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.18);"><span style="font-family:'Geist Mono',monospace; font-weight:500;">2 calls</span> de acompanhamento em <span style="font-family:'Geist Mono',monospace; font-weight:500;">30 dias</span></span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#F7F6F2; padding:12px 0; border-top:1px solid rgba(247,246,242,0.18);">Tudo do plano Diagnóstico</span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#F7F6F2; padding:12px 0; border-top:1px solid rgba(247,246,242,0.18);">Benchmark com <span style="font-family:'Geist Mono',monospace; font-weight:500;">3 concorrentes</span> diretos</span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#F7F6F2; padding:12px 0; border-top:1px solid rgba(247,246,242,0.18);">Priorização com estimativa de impacto em receita</span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#F7F6F2; padding:12px 0; border-top:1px solid rgba(247,246,242,0.18); border-bottom:1px solid rgba(247,246,242,0.18);"><span style="font-family:'Geist Mono',monospace; font-weight:500;">2 calls</span> de acompanhamento em <span style="font-family:'Geist Mono',monospace; font-weight:500;">30 dias</span></span>
           </div>
-          <a class="btn-light" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="margin-top:auto; display:inline-flex; align-items:center; justify-content:center; font-family:Geist,sans-serif; font-weight:500; font-size:0.9375rem; padding:14px 20px; text-decoration:none;">Falar no WhatsApp</a>
+          <a class="btn btn-light" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="margin-top:auto; font-size:0.9375rem; padding:14px 20px;">Falar no WhatsApp</a>
         </div>
 
         <!-- Plano 3 -->
-        <div style="border:1px solid #CCCCCC; background:#FFFFFF; padding:32px; display:flex; flex-direction:column;">
-          <h3 style="font-size:1.25rem; font-weight:600; color:#000000; margin:0 0 8px;">Operação Acompanhada</h3>
-          <p style="font-size:1rem; line-height:1.5; color:#808080; margin:0 0 24px;">Para ter alguém sênior do seu lado por <span style="font-family:'Geist Mono',monospace; font-weight:500;">3 meses</span>.</p>
-          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:1.25rem; color:#000000; margin:0 0 28px;">R$ 12.000 <span style="color:#808080; font-weight:500;">· à vista ou 3x de R$ 4.500</span></p>
+        <div style="border:1px solid #D8D6CE; background:#F7F6F2; padding:32px; display:flex; flex-direction:column;">
+          <h3 style="font-size:1.25rem; font-weight:600; color:#1A1814; margin:0 0 8px;">Operação Acompanhada</h3>
+          <p style="font-size:1rem; line-height:1.5; color:#84817A; margin:0 0 24px;">Para ter alguém sênior do seu lado por <span style="font-family:'Geist Mono',monospace; font-weight:500;">3 meses</span>.</p>
+          <p style="font-family:'Geist Mono',monospace; font-weight:600; font-size:1.25rem; color:#1A1814; margin:0 0 28px;">R$ 12.000 <span style="color:#84817A; font-weight:500;">· à vista ou 3x de R$ 4.500</span></p>
           <div style="display:flex; flex-direction:column; margin:0 0 28px;">
-            <span style="font-size:0.9375rem; line-height:1.5; color:#000000; padding:12px 0; border-top:1px solid #CCCCCC;">Tudo do plano Diagnóstico + Execução</span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#000000; padding:12px 0; border-top:1px solid #CCCCCC;">Acompanhamento quinzenal por <span style="font-family:'Geist Mono',monospace; font-weight:500;">90 dias</span></span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#000000; padding:12px 0; border-top:1px solid #CCCCCC;">Revisão de métricas mês a mês</span>
-            <span style="font-size:0.9375rem; line-height:1.5; color:#000000; padding:12px 0; border-top:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;">Canal direto para decisões rápidas</span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#1A1814; padding:12px 0; border-top:1px solid #D8D6CE;">Tudo do plano Diagnóstico + Execução</span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#1A1814; padding:12px 0; border-top:1px solid #D8D6CE;">Acompanhamento quinzenal por <span style="font-family:'Geist Mono',monospace; font-weight:500;">90 dias</span></span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#1A1814; padding:12px 0; border-top:1px solid #D8D6CE;">Revisão de métricas mês a mês</span>
+            <span style="font-size:0.9375rem; line-height:1.5; color:#1A1814; padding:12px 0; border-top:1px solid #D8D6CE; border-bottom:1px solid #D8D6CE;">Canal direto para decisões rápidas</span>
           </div>
-          <a class="btn-dark" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="margin-top:auto; display:inline-flex; align-items:center; justify-content:center; font-family:Geist,sans-serif; font-weight:500; font-size:0.9375rem; padding:14px 20px; text-decoration:none;">Falar no WhatsApp</a>
+          <a class="btn btn-dark" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="margin-top:auto; font-size:0.9375rem; padding:14px 20px;">Falar no WhatsApp</a>
         </div>
 
       </div>
@@ -166,58 +164,58 @@
   </section>
 
   <!-- DÚVIDAS -->
-  <section data-reveal style="background:#FFFFFF; padding: clamp(56px,9vw,96px) 24px;">
+  <section data-reveal style="background:#F7F6F2; padding: clamp(56px,9vw,96px) 24px;">
     <div style="max-width:1080px; margin:0 auto;">
-      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#555555; border-top:1px solid #555555; padding-top:14px; margin:0 0 40px; display:inline-block;">DÚVIDAS</p>
+      <p style="font-family:'Geist Mono',monospace; font-size:0.75rem; font-weight:500; text-transform:uppercase; letter-spacing:0.12em; color:#1C3A5E; border-top:1px solid #1C3A5E; padding-top:14px; margin:0 0 40px; display:inline-block;">DÚVIDAS</p>
       <div style="max-width:760px;">
-        <details style="border-top:1px solid #CCCCCC;">
-          <summary style="display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 0; font-size:1.125rem; font-weight:500; color:#000000;">Preciso te dar acesso aos meus dados?<span style="font-family:'Geist Mono',monospace; font-weight:500; color:#808080; flex:none;">+</span></summary>
-          <p style="font-size:1rem; line-height:1.65; color:#555555; margin:0; padding:0 0 24px; max-width:680px;">Sim, leitura apenas. Você libera acesso de visualização à plataforma, ao analytics e à conta de mídia. Nada é alterado na sua operação.</p>
+        <details style="border-top:1px solid #D8D6CE;">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 0; font-size:1.125rem; font-weight:500; color:#1A1814;">Preciso te dar acesso aos meus dados?<span style="font-family:'Geist Mono',monospace; font-weight:500; color:#84817A; flex:none;">+</span></summary>
+          <p style="font-size:1rem; line-height:1.65; color:#6B675E; margin:0; padding:0 0 24px; max-width:680px;">Sim, leitura apenas. Você libera acesso de visualização à plataforma, ao analytics e à conta de mídia. Nada é alterado na sua operação.</p>
         </details>
-        <details style="border-top:1px solid #CCCCCC;">
-          <summary style="display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 0; font-size:1.125rem; font-weight:500; color:#000000;">Quanto tempo leva?<span style="font-family:'Geist Mono',monospace; font-weight:500; color:#808080; flex:none;">+</span></summary>
-          <p style="font-size:1rem; line-height:1.65; color:#555555; margin:0; padding:0 0 24px; max-width:680px;">De <span style="font-family:'Geist Mono',monospace; font-weight:500;">7 a 10 dias</span> entre a liberação dos dados e a entrega do relatório.</p>
+        <details style="border-top:1px solid #D8D6CE;">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 0; font-size:1.125rem; font-weight:500; color:#1A1814;">Quanto tempo leva?<span style="font-family:'Geist Mono',monospace; font-weight:500; color:#84817A; flex:none;">+</span></summary>
+          <p style="font-size:1rem; line-height:1.65; color:#6B675E; margin:0; padding:0 0 24px; max-width:680px;">De <span style="font-family:'Geist Mono',monospace; font-weight:500;">7 a 10 dias</span> entre a liberação dos dados e a entrega do relatório.</p>
         </details>
-        <details style="border-top:1px solid #CCCCCC;">
-          <summary style="display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 0; font-size:1.125rem; font-weight:500; color:#000000;">Já tenho alguém cuidando do marketing. Ainda faz sentido?<span style="font-family:'Geist Mono',monospace; font-weight:500; color:#808080; flex:none;">+</span></summary>
-          <p style="font-size:1rem; line-height:1.65; color:#555555; margin:0; padding:0 0 24px; max-width:680px;">Faz. O diagnóstico não substitui o seu time, mostra para ele onde priorizar com base em número, não em achismo.</p>
+        <details style="border-top:1px solid #D8D6CE;">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 0; font-size:1.125rem; font-weight:500; color:#1A1814;">Já tenho alguém cuidando do marketing. Ainda faz sentido?<span style="font-family:'Geist Mono',monospace; font-weight:500; color:#84817A; flex:none;">+</span></summary>
+          <p style="font-size:1rem; line-height:1.65; color:#6B675E; margin:0; padding:0 0 24px; max-width:680px;">Faz. O diagnóstico não substitui o seu time, mostra para ele onde priorizar com base em número, não em achismo.</p>
         </details>
-        <details style="border-top:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;">
-          <summary style="display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 0; font-size:1.125rem; font-weight:500; color:#000000;">Serve para qualquer tamanho de marca?<span style="font-family:'Geist Mono',monospace; font-weight:500; color:#808080; flex:none;">+</span></summary>
-          <p style="font-size:1rem; line-height:1.65; color:#555555; margin:0; padding:0 0 24px; max-width:680px;">O diagnóstico funciona melhor em marcas que já vendem de forma consistente e querem entender por que o crescimento custa caro. O valor do plano se ajusta ao porte da operação.</p>
+        <details style="border-top:1px solid #D8D6CE; border-bottom:1px solid #D8D6CE;">
+          <summary style="display:flex; justify-content:space-between; align-items:center; gap:24px; padding:24px 0; font-size:1.125rem; font-weight:500; color:#1A1814;">Serve para qualquer tamanho de marca?<span style="font-family:'Geist Mono',monospace; font-weight:500; color:#84817A; flex:none;">+</span></summary>
+          <p style="font-size:1rem; line-height:1.65; color:#6B675E; margin:0; padding:0 0 24px; max-width:680px;">O diagnóstico funciona melhor em marcas que já vendem de forma consistente e querem entender por que o crescimento custa caro. O valor do plano se ajusta ao porte da operação.</p>
         </details>
       </div>
     </div>
   </section>
 
   <!-- CTA FINAL -->
-  <section data-reveal style="background:#000000; color:#FFFFFF; padding: clamp(72px,11vw,120px) 24px;">
+  <section data-reveal style="background:#1A1814; color:#F7F6F2; padding: clamp(72px,11vw,120px) 24px;">
     <div style="max-width:1080px; margin:0 auto;">
-      <h2 style="font-family:Geist,sans-serif; font-weight:700; font-size:clamp(1.75rem,3vw,2.25rem); line-height:1.15; letter-spacing:-0.01em; color:#FFFFFF; max-width:18ch; margin:0 0 36px;">Descubra onde a sua receita está vazando.</h2>
+      <h2 style="font-family:Geist,sans-serif; font-weight:700; font-size:clamp(1.75rem,3vw,2.25rem); line-height:1.15; letter-spacing:-0.01em; color:#F7F6F2; max-width:18ch; margin:0 0 36px;">Descubra onde a sua receita está vazando.</h2>
       <div style="display:flex; flex-direction:column; align-items:flex-start; gap:16px;">
-        <a class="btn-light" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="display:inline-flex; align-items:center; justify-content:center; font-family:Geist,sans-serif; font-weight:500; font-size:1rem; padding:17px 30px; text-decoration:none;">Falar no WhatsApp</a>
-        <p style="font-size:0.9375rem; line-height:1.6; color:#808080; margin:0; max-width:560px;">Me manda uma mensagem e eu te respondo com dois ou três pontos que costumo encontrar em marcas como a sua.</p>
+        <a class="btn btn-light" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="font-size:1rem; padding:17px 30px;">Falar no WhatsApp</a>
+        <p style="font-size:0.9375rem; line-height:1.6; color:#A8A49B; margin:0; max-width:560px;">Me manda uma mensagem e eu te respondo com dois ou três pontos que costumo encontrar em marcas como a sua.</p>
       </div>
     </div>
   </section>
 
   <!-- RODAPÉ -->
-  <footer style="background:#FFFFFF; padding: clamp(40px,6vw,64px) 24px;">
-    <div style="max-width:1080px; margin:0 auto; border-top:1px solid #555555; padding-top:32px; display:flex; flex-wrap:wrap; gap:32px 64px; justify-content:space-between; align-items:flex-start;">
+  <footer style="background:#F7F6F2; padding: clamp(40px,6vw,64px) 24px;">
+    <div style="max-width:1080px; margin:0 auto; border-top:1px solid #C9C5BA; padding-top:32px; display:flex; flex-wrap:wrap; gap:32px 64px; justify-content:space-between; align-items:flex-start;">
       <div>
-        <p style="font-size:1.0625rem; font-weight:600; color:#000000; margin:0 0 6px;">Diego Martins Silva</p>
-        <p style="font-size:0.9375rem; line-height:1.5; color:#808080; margin:0; max-width:360px;">Diagnóstico de retenção e LTV para marcas de e-commerce</p>
+        <p style="font-size:1.0625rem; font-weight:600; color:#1A1814; margin:0 0 6px;">Diego Martins Silva</p>
+        <p style="font-size:0.9375rem; line-height:1.5; color:#84817A; margin:0; max-width:360px;">Diagnóstico de retenção e LTV para marcas de e-commerce</p>
       </div>
       <div style="display:flex; flex-direction:column; gap:8px;">
-        <a href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="font-family:'Geist Mono',monospace; font-size:0.875rem; font-weight:500; color:#000000; text-decoration:none; border-bottom:1px solid #CCCCCC; padding-bottom:2px; align-self:flex-start;">WhatsApp</a>
-        <a href="mailto:contato@acelerandoresultados.com.br" style="font-family:'Geist Mono',monospace; font-size:0.875rem; font-weight:500; color:#000000; text-decoration:none; border-bottom:1px solid #CCCCCC; padding-bottom:2px; align-self:flex-start;">contato@acelerandoresultados.com.br</a>
+        <a href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="font-family:'Geist Mono',monospace; font-size:0.875rem; font-weight:500; color:#1A1814; text-decoration:none; border-bottom:1px solid #D8D6CE; padding-bottom:2px; align-self:flex-start;">WhatsApp</a>
+        <a href="/cdn-cgi/l/email-protection#4a2925243e2b3e250a2b292f262f382b242e25382f393f263e2b2e253964292527642838" style="font-family:'Geist Mono',monospace; font-size:0.875rem; font-weight:500; color:#1A1814; text-decoration:none; border-bottom:1px solid #D8D6CE; padding-bottom:2px; align-self:flex-start;"><span class="__cf_email__" data-cfemail="13707c7d6772677c537270767f7661727d777c617660667f6772777c603d707c7e3d7161">[email&#160;protected]</span></a>
       </div>
     </div>
   </footer>
 
   <!-- Botão fixo de WhatsApp (mobile) -->
-  <a class="wa-fixed" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#000000; color:#FFFFFF; text-align:center; padding:16px; font-family:Geist,sans-serif; font-weight:500; font-size:1rem; text-decoration:none; border-top:1px solid #FFFFFF;">Falar no WhatsApp</a>
+  <a class="wa-fixed" href="https://wa.me/5543991789365?text=Oi%20Diego%2C%20vi%20sua%20p%C3%A1gina%20sobre%20o%20diagn%C3%B3stico%20de%20reten%C3%A7%C3%A3o%20e%20quero%20entender%20pra%20minha%20marca." target="_blank" rel="noopener" style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#1A1814; color:#F7F6F2; text-align:center; padding:16px; font-family:Geist,sans-serif; font-weight:500; font-size:1rem; text-decoration:none; border-top:1px solid #1C3A5E;">Falar no WhatsApp</a>
 
 </main>
-</body>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
